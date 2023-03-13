@@ -1,0 +1,205 @@
+/*general*/
+
+
+* {
+	box-sizing: borderbox;
+
+}
+
+html, body {
+	height: 100%;
+
+}
+
+body {
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(210, 60%, 98%);
+
+
+
+}
+
+a {
+	text-decoration: none;
+	color: hsl(219, 12%, 42%);
+
+
+}
+
+/*notificacion*/
+.notifications {
+    
+	max-width: 730px;
+	min-width: 480px;
+	background-color: white;
+	border-radius: 15px;
+	padding: 2rem;
+	}
+
+/*header*/
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+
+
+
+}
+
+.header__title {
+	margin: 0;
+	font-size: 1.8rem;
+
+
+
+}
+
+.unread-count {
+	background-color: blue;
+	color: white;
+	font-size: 1.5rem;
+	padding: .2rem .7rem;
+	border-radius: 6px;
+	margin-left: .2rem;
+
+
+}
+
+
+/*notificacion*/
+.notification {
+	padding: 1rem;
+	display: grid;
+	row-gap: .7rem;
+
+
+	grid-template-areas: 
+	"avatar title"
+	"avatar date";
+	grid-template-columns: min-content 1fr;
+	
+
+
+
+}
+
+
+
+.notification--unread {
+	background-color: #FFFAFA;
+	border-radius: 8px;
+
+
+
+}
+
+.notification--message {
+  grid-template-areas: 
+	"avatar title"
+	"avatar date"
+	". message";
+
+
+}
+
+.notification--picture {
+
+	 grid-template-areas: 
+	"avatar title image"
+	"avatar date image";
+	grid-template-columns: min-content 1fr min-content;
+
+
+
+}
+
+.notification > * {
+ margin: 0;	
+}
+
+
+.avatar {
+	width: 45px;
+	height: auto;
+	grid-area: avatar;
+
+
+
+}
+
+.notification__title {
+	font-weight: normal;
+	
+	grid-area: title;
+	font-size: 1.3rem;
+	color: hsl(219, 12%, 42%);
+
+}
+
+.link {
+	font-weight: bold;
+
+}
+
+.link--group {
+	color: blue;
+
+}
+
+
+
+
+
+.unread-bubble {
+	background-color: red;
+	width: : 8px;
+	height: 8px;
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: .5rem;
+	vertical-align: middle;
+
+}
+
+.notification__title strong{
+	color: black;
+} 
+
+.date {
+	grid-area: date;
+	font-size: 1.1rem;
+	color: hsl(219, 14%, 63%);
+
+	
+
+}
+
+.notification__message {
+	
+	grid-area: message;
+	border: 1px  solid hsl(210, 60%, 98%);
+	border-radius: 5px;
+	padding: 1.2rem;
+	color: hsl(224, 21%, 14%);
+
+
+}
+
+.notification__picture {
+	width: 45px;
+	height: 45px;
+	grid-area: image;
+
+
+
+}
+
+
+
+
+
